@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<!---
+--------------------------------------------------
+    <button onclick="alert('three')">click here</button>
+--------------------------------------------------
+    <button id="btn">clicks</button>
+    <script>
+        const btn = document.querySelector('#btn');
+        btn.onclick = () => alert("two");
+    </script>
+---------------------------------------------------
+    <button id="btn">click here too</button>
+    <script>
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', () => {
+            alert("one");});
+    </script>
+--------------------------------------------------
+-->
+    <button onclick="alertFunction()">clicks</button>
+    <script>
+        function alertFunction() {
+            alert("four");   
+        }
+        btn.addEventListener('click', alertFunction);
+
+        btn.addEventListener('click', function (e) {
+            e.target.style.background = 'red';
+        });
+    </script>
+</body>
+</html>
